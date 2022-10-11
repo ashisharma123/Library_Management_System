@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "ef744f4c-7b67-4485-9aef-a776e62ead12",
+		"name": "Library_MS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23211541"
+	},
+	"item": [
+		{
+			"name": "System",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ISBN\":3779,\n    \"book_name\": \"Prafull_book\",\n    \"copies\":0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/system/registration",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"system",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBooks",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getBook",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "renew",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/Student/renew/:3777?name=ashish sharma",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"Student",
+								"renew",
+								":3777"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "ashish sharma"
+								}
+							],
+							"variable": [
+								{
+									"key": "3777",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "history",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Library",
+			"item": [
+				{
+					"name": "registerToSystem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ISBN\": 3775,\n    \"book_name\":\"The story of my life\",\n    \"copies\" : 7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/library/registerToSystem",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"library",
+								"registerToSystem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ISBN\": 3773,\n    \"student_name\": \"ashish sharma\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/library/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"library",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "return",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ISBN\" : 3775,\n    \"student_name\" : \"ashish sharma\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/library/return",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"library",
+								"return"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDetails",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "history",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/library/history?name=prafull sharma",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"library",
+								"history"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "prafull sharma"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
